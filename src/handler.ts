@@ -7,14 +7,14 @@ export async function handleRequest(request: Request): Promise<Response> {
     if (params.has('id')) {
       const id = params.get('id')
       const productsDb = await getDatabase(DATABASE_ID)
-      const products = productsDb
-        .filter(p => [id].includes(p.id))
+      const product = productsDb
+        .find(p => p.id === id)
       
-      if (!products.length) {
+      if (!product) {
         throw new Error('No properties found with that id')
       }
 
-      return new Response(JSON.stringify(products), {
+      return new Response(JSON.stringify(product), {
         headers: {
           'content-type': 'application/json;charset=UTF-8',
         },
