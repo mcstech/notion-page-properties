@@ -1,13 +1,9 @@
-name = "stock-qty-notion"
+name = "notion-page-properties"
 type = "webpack"
 webpack_config = "webpack.config.js"
-zone_id = ""
-account_id = ""
-route = ""
+route = ''
+zone_id = ''
+usage_model = ''
+compatibility_flags = []
 workers_dev = true
-compatibility_date = "2022-03-28"
-
-[build]
-command = "npm install && npm run build"
-[build.upload]
-format = "service-worker"
+compatibility_date = "2022-03-01"
