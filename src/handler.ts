@@ -6,7 +6,7 @@ export async function handleRequest(request: Request): Promise<Response> {
     const params = new URLSearchParams(url.search)
     if (params.has('id')) {
       const id = params.get('id')
-      const productsDb = await getDatabase(PRODUCTS_DATABASE_ID)
+      const productsDb = await getDatabase(DATABASE_ID)
       const products = productsDb
         .filter(p => [id].includes(p.id))
       
