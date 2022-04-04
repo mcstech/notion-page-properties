@@ -5,7 +5,7 @@ $ git clone https://github.com/mcstech/notion-page-properties
 $ cd notion-page-properties
 $ npx wrangler secret put NOTION_TOKEN
 $ yarn install
-$ npx wrangler dev
+$ npx wrangler dev // or npx wrangler publish
 ```
 
 ## Environment Variables
